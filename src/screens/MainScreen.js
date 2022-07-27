@@ -14,41 +14,18 @@ const HomeScreen = ({ navigation }) => {
     <SafeAreaView style={styles.container}>
       <View
         style={{
-          flex: 3,
+          flex: 1,
           backgroundColor: "rgb(248, 113, 113)",
           alignItems: "center",
           justifyContent: "center",
         }}
       >
         <Text style={styles.whiteText}>Metal Heroes</Text>
-        <Image
-          style={styles.photo}
-          source={require("../../assets/manwithguitar.png")}
-        />
-        <Text style={styles.whiteSmallText}>
-          The best way to learn how to play an instrument!
-        </Text>
       </View>
 
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <View>
-          <Button
-            color={"rgb(34, 211, 238)"}
-            title="Create an Account"
-            onPress={() => navigation.navigate("SignUpScreen")}
-          />
-        </View>
-
-        <View style={styles.space} />
-
-        <View>
-          <Button
-            color={"gray"}
-            title="or Login"
-            onPress={() => navigation.navigate("SignInScreen")}
-          />
-        </View>
-      </View>
+      <View
+        style={{ flex: 5, alignItems: "center", justifyContent: "center" }}
+      ></View>
     </SafeAreaView>
   );
 };
@@ -78,9 +55,8 @@ const styles = StyleSheet.create({
     padding: 5,
     backgroundColor: "rgb(34, 211, 238)",
   },
-  space: {
-    width: 20,
-    height: 20,
+  smallBox: {
+    padding: 5,
   },
 });
 
