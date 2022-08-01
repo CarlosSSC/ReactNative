@@ -23,9 +23,9 @@ const HomeScreen = ({ navigation }) => {
         <Text style={styles.whiteText}>Metal Heroes</Text>
       </View>
 
-      <View
-        style={{ flex: 5, alignItems: "center", justifyContent: "center" }}
-      ></View>
+      <View style={[styles.whitePart, styles.border]}>
+        <Text style={{ color: "white" }}>NOTAS</Text>
+      </View>
     </SafeAreaView>
   );
 };
@@ -45,18 +45,23 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 35,
   },
-  photo: {
-    width: 300,
-    height: 260,
-  },
   button: {
     borderRadius: 16,
     borderColor: "rgb(34, 211, 238)",
     padding: 5,
     backgroundColor: "rgb(34, 211, 238)",
   },
-  smallBox: {
+  border: {
+    backgroundColor: "rgb(248, 113, 113)",
+    borderColor: "transparent",
+    borderRadius: 35,
+    margin: 20,
+  },
+  whitePart: {
     padding: 5,
+    flex: 5,
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 
